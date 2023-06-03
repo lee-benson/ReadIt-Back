@@ -80,6 +80,13 @@ DATABASES = {
         'USER': 'readit_admin',
         'PASSWORD': 'satoru',
         'HOST': 'localhost',
+    },
+    'gutenberg': {
+        'ENGINE': 'django.db.backends.gdbm',
+        'NAME': '/Users/bensonlee/dev/gutenberg_cache.db',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
     }
 }
 
