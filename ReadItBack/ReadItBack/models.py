@@ -8,6 +8,12 @@ class GutenbergText(models.Model):
     genre = models.CharField(max_length=50)
     page = models.IntegerField()
 
+    class Meta:
+        using = 'gutenberg'
+
 
 class User(AbstractUser):
     library = models.ManyToManyField(GutenbergText, related_name='users')
+
+    class Meta:
+        using = 'default'
