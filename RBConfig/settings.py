@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ReadItBack.urls'
+ROOT_URLCONF = 'RBConfig.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ReadItBack.wsgi.application'
+WSGI_APPLICATION = 'RBConfig.wsgi.application'
 
 
 # Database
