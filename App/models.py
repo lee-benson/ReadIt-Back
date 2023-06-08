@@ -12,6 +12,14 @@ class GutenbergText(models.Model):
         using = 'gutenberg'
 
 
+class Category(models.Model):
+    genre = models.CharField(max_length=50)
+    text = models.ManyToManyField(GutenbergText, related_name='categories')
+
+    class Meta:
+        using = 'default'
+
+
 class User(AbstractUser):
     library = models.ManyToManyField(GutenbergText, related_name='users')
 
