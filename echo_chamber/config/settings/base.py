@@ -347,3 +347,15 @@ WEBPACK_LOADER = {
 # Your stuff...
 # ------------------------------------------------------------------------------
 ASGI_APPLICATION = "config.asgi.application"
+
+
+# Instead of storing messages into the database and have the server continue to listen for messages to distribute, redis acts as that main hub for messages (cache)
+CHANNELS_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [(env("REDIS_HOST"), env.int("REDIS_PORT"))],
+        },
+    },
+}
+
