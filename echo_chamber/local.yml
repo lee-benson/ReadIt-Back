@@ -61,6 +61,9 @@ services:
   redis:
     image: redis:6
     container_name: echo_chamber_local_redis
+    ports:
+      - "6379:6379"
+
 
   celeryworker:
     <<: *django
@@ -107,3 +110,4 @@ services:
     command: npm run dev
     ports:
       - '3000:3000'
+
