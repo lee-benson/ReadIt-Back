@@ -14,7 +14,7 @@ class ChatConsumer(JsonWebsocketConsumer):
         self.accept()
         self.send_json(
           {
-              "type": "Welcom_message",
+              "type": "Welcome_message",
               "message": "Hey there! You've successfully connected!",
           }
         )
